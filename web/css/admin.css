@@ -1,0 +1,131 @@
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+    text-align-last: center;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: yellow;
+    color: black;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+/*Content*/
+.wrapper{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper a{
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+    margin: 10px;
+}
+
+.wrapper a span{
+  position: relative;
+  z-index: 2;
+}
+
+.wrapper a:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: yellow;
+  transition: all .35s;
+}
+
+.wrapper a:hover{
+  color: #fff;
+}
+
+.wrapper a:hover:after{
+  width: 100%;
+}
